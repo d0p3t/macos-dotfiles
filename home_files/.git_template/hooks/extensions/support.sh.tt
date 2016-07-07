@@ -35,3 +35,11 @@ _print_warning() {
   local message="$1"
   printf "\033[33m$message\033[m"
 }
+
+# Label: Print error message.
+# Description: Print red error message.
+# Parameters: $1 (required) - The message to print.
+_print_error() {
+  local message="$1"
+  printf "\033[31m$message\033[m"
+}
