@@ -14,10 +14,10 @@ _scan_code() {
     results=("$(ag --file-search-regex $file_regex $search_regex --ignore $ignore_regex . || true)")
 
     if [[ ${#results[@]} > 0 && ${results[@]} != '' ]]; then
-      _print_error "$label: $message:\n\n"
+      _print_error "$label: $message:\n"
 
       for line in ${results[@]}; do
-        _print_error "$line\n"
+        _print_error "  $line\n"
       done
 
       exit 1

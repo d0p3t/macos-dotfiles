@@ -41,10 +41,8 @@ git_commit_message_words() {
     _print_warning "$(_git_label): Commit message uses words/phrases that should be avoided:\n"
 
     for line in ${matched_lines[@]}; do
-      _print_warning " - $line\n"
+      _print_warning "  $line\n"
     done
-
-    printf "\n"
   fi
 }
 
@@ -68,9 +66,7 @@ git_commit_message_length() {
     _print_warning "$(_git_label): Commit message exceeds $line_length character line length:\n"
 
     for line in ${long_lines[@]}; do
-      _print_warning " - $line\n"
+      _print_warning "  $line\n"
     done
-
-    printf "\n"
   fi
 }
