@@ -34,4 +34,4 @@ Metrics/BlockLength:
     - "**/*.gemspec"
     - "spec/**/*"
 Metrics/LineLength:
-  Max: 100
+  Max: 120
