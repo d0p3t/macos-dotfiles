@@ -3,6 +3,9 @@
 # DESCRIPTION
 # Executes the command line interface.
 
+# USAGE
+# ./run.sh OPTION
+
 # SETTINGS
 set -o errexit
 set -o pipefail
