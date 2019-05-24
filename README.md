@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="dotfiles.png" alt="Dotfiles Icon"/>
-</p>
-
 # Dotfiles
 
 [![Circle CI Status](https://circleci.com/gh/bkuhlmann/dotfiles.svg?style=svg)](https://circleci.com/gh/bkuhlmann/dotfiles)
