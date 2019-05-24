@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/bin/bash
 
 # DESCRIPTION
 # Defines general utility functions.
@@ -6,7 +6,7 @@
 # Answers a list of files stored in the home_files folder of this project.
 home_files() {
   for file in $(find home_files -type f); do
-    printf "%s\n" "$file"
+    printf "$file\n"
   done
 }
 export -f home_files
@@ -21,10 +21,10 @@ export -f base_dest_file
 
 # Shows managed files.
 show_files() {
-  printf "%s\n" "Managed Dotfiles:"
+  printf "Managed Dotfiles:\n"
 
   for file in $(home_files); do
-    printf "  %s\n" "$(base_dest_file $file)"
+    printf "  $(base_dest_file $file)\n"
   done
 }
 export -f show_files
@@ -40,20 +40,20 @@ install_file() {
   if [[ ! -f "$dest_file" ]]; then
     mkdir -p "$dest_dir"
     cp "$source_file" "$dest_file"
-    printf "  + %s\n" "$dest_file"
+    printf "  + $dest_file\n"
   fi
 }
 export -f install_file
 
 # Installs all files.
 install_files() {
-  printf "%s\n" "Installing dotfiles..."
+  printf "Installing dotfiles...\n"
 
   for file in $(home_files); do
     install_file $file
   done
 
-  printf "%s\n" "Dotfiles install complete!"
+  printf "Dotfiles install complete!\n"
 }
 export -f install_files
 
@@ -68,7 +68,7 @@ link_file() {
 
   # Proceed only if the symbolic link doesn't exist and is not an excluded file.
   if [[ ! -h "$dest_file" && ! "$source_file" =~ $excludes ]]; then
-    read -r -p "  Link $dest_file -> $source_file (y/n)? " response
+    read -p "  Link $dest_file -> $source_file (y/n)? " response
     if [[ $response == 'y' ]]; then
       mkdir -p "$dest_dir"
       ln -sf "$source_file" "$dest_file"
@@ -79,13 +79,13 @@ export -f link_file
 
 # Links all files.
 link_files() {
-  printf "%s\n" "Linking dotfiles..."
+  printf "Linking dotfiles...\n"
 
   for file in $(home_files); do
     link_file $file
   done
 
-  printf "%s\n" "Dotfiles link complete!"
+  printf "Dotfiles link complete!\n"
 }
 export -f link_files
 
@@ -98,23 +98,23 @@ check_file() {
 
   if [[ -e "$dest_file" || -h "$dest_file" ]]; then
     if [[ "$(diff $dest_file $source_file)" != '' ]]; then
-      printf "  * %s\n" "$dest_file"
+      printf "  * $dest_file\n"
     fi
   else
-    printf "  - %s\n" "$dest_file"
+    printf "  - $dest_file\n"
   fi
 }
 export -f check_file
 
 # Checks all files for changes.
 check_files() {
-  printf "%s\n" "Dotfiles Changes:"
+  printf "Dotfiles Changes:\n"
 
   for file in $(home_files); do
     check_file $file
   done
 
-  printf "%s\n" "Dotfiles check complete!"
+  printf "Dotfiles check complete!\n"
 }
 export -f check_files
 
@@ -127,7 +127,7 @@ delete_file() {
 
   # Proceed only if file exists.
   if [[ -e "$dest_file" || -h "$dest_file" ]] && [[ ! "$dest_file" =~ $excludes ]]; then
-    read -r -p "  Delete $dest_file (y/n)? " response
+    read -p "  Delete $dest_file (y/n)? " response
     if [[ $response == 'y' ]]; then
       rm -f "$dest_file"
     fi
@@ -137,12 +137,12 @@ export -f delete_file
 
 # Delete files.
 delete_files() {
-  printf "%s\n" "Deleting dotfiles..."
+  printf "Deleting dotfiles...\n"
 
   for file in $(home_files); do
     delete_file $file
   done
 
-  printf "%s\n" "Dotfiles deletion complete!"
+  printf "Dotfiles deletion complete!\n"
 }
 export -f delete_files
