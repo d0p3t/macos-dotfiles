@@ -37,6 +37,7 @@ end
 %w(
   pry
   pry-byebug
+  pry-state
   bond
   wirb
   hirb
