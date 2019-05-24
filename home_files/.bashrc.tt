@@ -68,8 +68,7 @@ fi
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # FZF
-export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --color always --exclude .git"
-export FZF_DEFAULT_OPTS="--multi --ansi"
+export FZF_DEFAULT_OPTS="--multi"
 
 # Git
 source "$HOMEBREW_PREFIX/opt/git/etc/bash_completion.d/git-completion.bash"
