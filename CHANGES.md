@@ -1,4 +1,4 @@
-# 31.2.0 (2018-04-01)
+# v31.2.0 (2018-04-01)
 
 - Fixed greedy global Git ignore configuration.
 - Added Yarn aliases.
@@ -14,7 +14,7 @@
 - Refactored Overmind aliases as functions.
 - Refactored `gld` alias as dynamic function.
 
-# 31.1.0 (2018-03-03)
+# v31.1.0 (2018-03-03)
 
 - Fixed Git pre-push hook extension label output.
 - Added `cina` alias for appending to existing asciinema recordings.
@@ -31,7 +31,7 @@
 - Updated table of contents for README.
 - Removed ERD configuration.
 
-# 31.0.0 (2018-02-20)
+# v31.0.0 (2018-02-20)
 
 - Fixed Pragmater `--includes` option.
 - Fixed README feature list and IRB console documentation.
@@ -70,7 +70,7 @@
 - Refactored printing of Git commit options.
 - Refactored regular expression pattern variables.
 
-# 30.0.0 (2018-01-01)
+# v30.0.0 (2018-01-01)
 
 - Fixed README table of contents.
 - Fixed `gli` function so Git history isn't reversed.
@@ -83,7 +83,7 @@
 - Updated to Ruby 2.5.0.
 - Removed ctags custom output file configuration.
 
-# 29.1.0 (2017-11-19)
+# v29.1.0 (2017-11-19)
 
 - Fixed Git 2.15.x colored output.
 - Fixed `gile` function documentation.
@@ -97,7 +97,7 @@
 - Updated to Git Cop 1.7.0.
 - Updated to Rake 12.3.0.
 
-# 29.0.0 (2017-11-02)
+# v29.0.0 (2017-11-02)
 
 - Fixed `gince` function format for project names.
 - Fixed `gmonth` function format.
@@ -106,7 +106,7 @@
 - Removed `git fetch --prune` usage.
 - Removed redundant git-fetch from `gync` function.
 
-# 28.0.0 (2017-09-23)
+# v28.0.0 (2017-09-23)
 
 - Fixed Git Hook extension labels.
 - Added Brakeman Git Pre-Push Hook.
@@ -125,7 +125,7 @@
 - Removed `erd` function.
 - Refactored comment totals Git Hook.
 
-# 27.0.0 (2017-08-06)
+# v27.0.0 (2017-08-06)
 
 - Fixed Diff So Fancy settings.
 - Fixed Railroady model generation.
@@ -135,7 +135,7 @@
 - Removed Xray config.
 - Refactored Bash and Git configurations to `~/.config`.
 
-# 26.1.0 (2017-07-16)
+# v26.1.0 (2017-07-16)
 
 - Fixed `glameh` function when looking for file copies.
 - Added Git Cop commit message Git Hook.
@@ -148,7 +148,7 @@
 - Updated gem dependencies.
 - Removed Travis CI support.
 
-# 26.0.0 (2017-05-27)
+# v26.0.0 (2017-05-27)
 
 - Added .erdconfig template.
 - Updated Code Quality 1.1.0.
@@ -166,7 +166,7 @@
 - Removed unused (program) aliases.
 - Removed unused Git merge aliases.
 
-# 25.2.0 (2017-05-11)
+# v25.2.0 (2017-05-11)
 
 - Fixed Git hook detection of avoidable commit message words/phrases.
 - Added Git hook for Ruby IRB binding debug statements.
@@ -178,7 +178,7 @@
 - Updated global Git configuration to only fast forward merges.
 - Updated to Code Quality 1.0.0.
 
-# 25.1.0 (2017-04-11)
+# v25.1.0 (2017-04-11)
 
 - Fixed Unused URL.
 - Fixed auto-generation of README usage documentation.
@@ -189,7 +189,7 @@
 - Updated to Ruby 2.4.1.
 - Refactored `gbc` function.
 
-# 25.0.0 (2017-02-05)
+# v25.0.0 (2017-02-05)
 
 - Fixed CTags configuration so default file is always `.tags`.
 - Fixed `ginfo` to use formatted branch lists.
@@ -208,7 +208,7 @@
 - Removed unused Elm aliases.
 - Refactored grouping of Bundler, Rake, Rspec, and Guard functions.
 
-# 24.2.0 (2017-01-01)
+# v24.2.0 (2017-01-01)
 
 - Added Elm `elmm` function for compiling source code.
 - Added Git commit hook warning check for Reek comments.
@@ -230,7 +230,7 @@
 - Refactored scripts to use noop when nothing to do.
 - Refactored use of tags file for CTag Git hook extension.
 
-# 24.1.0 (2016-11-19)
+# v24.1.0 (2016-11-19)
 
 - Fixed Bash alias variable definition expansion.
 - Fixed missing Bash script source header.
@@ -245,7 +245,7 @@
 - Updated to `gget` to use `--get` option.
 - Refactored `pss` as a function.
 
-# 24.0.0 (2016-11-14)
+# v24.0.0 (2016-11-14)
 
 - Fixed Git hook extension permissions to be read-only.
 - Fixed README link to macOS project.
@@ -274,14 +274,14 @@
 - Removed redundant documentation that can be found in the README.
 - Refactored Git hook gem dependency checking.
 
-# 23.0.0 (2016-10-11)
+# v23.0.0 (2016-10-11)
 
 - Fixed Bash script header to dynamically load correct environment.
 - Added `itl` alias for iTerm tab labeling.
 - Removed `--all` option from Homebrew update/upgrade aliases.
 - Removed `run.sh` (use `bin/run` instead).
 
-# 22.0.0 (2016-09-30)
+# v22.0.0 (2016-09-30)
 
 - Fixed `grim` alias to leverage `gri` functionality.
 - Fixed use of `break` in case statements within while loops.
@@ -322,7 +322,7 @@
 - Refactored calculating Git stash count to private function.
 - Refactored git last tag info to private function.
 
-# 21.0.0 (2016-04-30)
+# v21.0.0 (2016-04-30)
 
 - Fixed .bashrc program loading.
 - Added .ruby-version template.
@@ -354,7 +354,7 @@
 - Removed `tocv` alias.
 - Removed rbenv support.
 
-# 20.1.0 (2016-04-10)
+# v20.1.0 (2016-04-10)
 
 - Fixed `gemcli` alias output.
 - Fixed `rew` function documentation to describe branch option.
@@ -372,7 +372,7 @@
 - Refactored Git local and remote branch deletion.
 - Refactored IRB prompt keys and variables.
 
-# 20.0.0 (2016-03-20)
+# v20.0.0 (2016-03-20)
 
 - Fixed .pryrc template errors when loading missing gems.
 - Fixed Git branch switch/delete functions for branches with pathnames.
@@ -429,7 +429,7 @@
 - Refactored `grs` alias as a function.
 - Refactored launching of default editor to use long wait option.
 
-# 19.0.0 (2016-01-02)
+# v19.0.0 (2016-01-02)
 
 - Fixed Ruby IRB config with loading of gem enhancements.
 - Added Bash alias section.
@@ -451,7 +451,7 @@
 - Removed `ios` alias.
 - Removed `toc` alias (use toc* aliases instead).
 
-# 18.1.0 (2015-12-02)
+# v18.1.0 (2015-12-02)
 
 - Fixed outdated reference links.
 - Added "diff3" merge conflict style support to global Git configuration.
@@ -465,7 +465,7 @@
 - Updated README with Tocer generated Table of Contents.
 - Removed CW alias from global Git config.
 
-# 18.0.0 (2015-10-14)
+# v18.0.0 (2015-10-14)
 
 - Fixed "n" option in `gup` function code review.
 - Fixed DNS aliases to flush and report stats correctly.
@@ -499,7 +499,7 @@
 - Refactored `gbc` function to use local variable.
 - Refactored `glamel` to `glameh`.
 
-# 17.0.0 (2015-09-27)
+# v17.0.0 (2015-09-27)
 
 - Fixed `gri` function issue when no origin exists.
 - Fixed `gtagd` function issues with no origin repository.
@@ -548,7 +548,7 @@
 - Refactored CTags configuration.
 - Refactored Ruby/RSpec function sections.
 
-# 16.1.0 (2015-07-12)
+# v16.1.0 (2015-07-12)
 
 - Removed extraneous confirmation wording from `gtagd` function.
 - Fixed `bashe` alias path to environment settings.
@@ -571,7 +571,7 @@
 - Added interactive error fixing for psql prompt.
 - Added missing documentation for private functions.
 
-# 16.0.0 (2015-06-07)
+# v16.0.0 (2015-06-07)
 
 - Removed Git post-receive hook.
 - Removed Git post-update hook.
@@ -596,7 +596,7 @@
 - Added `rcopo` alias for running single Rubocop cops.
 - Added the `gpn` alias for `git push --no-verify`.
 
-# 15.1.0 (2015-03-28)
+# v15.1.0 (2015-03-28)
 
 - Fixed `gash*` functions so that processing emtpy stashes won't error.
 - Updated `gbd` function to prompt for local and remote branch deletion.
@@ -625,7 +625,7 @@
 - Added remote fetching of GitHub pull requests to global Git config.
 - Refactored Git hook gemfile_path as bundler_gemfile_path.
 
-# 15.0.0 (2015-03-01)
+# v15.0.0 (2015-03-01)
 
 - Removed `gln` alias (use `gld` instead).
 - Removed `ggc` alias (use `gvac` instead).
@@ -661,7 +661,7 @@
 - Added Homebrew sbin to PATH.
 - Added `pgt` function for editing PostgreSQL template1.
 
-# 14.2.0 (2015-01-11)
+# v14.2.0 (2015-01-11)
 
 - Fixed dotfile searching (i.e. `dots s`) so only function names are returned.
 - Fixed dotfile searching (i.e. `dots s`) to allow for full function name searches.
@@ -684,7 +684,7 @@
 - Added rbenv variables support.
 - Added auto-detection of words/phrases to avoid in the Git commit messages.
 
-# 14.1.0 (2015-01-03)
+# v14.1.0 (2015-01-03)
 
 - Updated `gup` function to safely compare previous commit.
 - Updated `glamel` function to use full instead of short stats.
@@ -697,7 +697,7 @@
 - Added `gelc` alias for ignoring previous tracked file now in .gitignore.
 - Added the `gistory` function for reviewing a file's history.
 
-# 14.0.0 (2015-01-01)
+# v14.0.0 (2015-01-01)
 
 - Removed the `geady` alias (use `gri` instead).
 - Removed the `gvca` function (use `gvaca` instead).
@@ -728,7 +728,7 @@
 - Updated "gash" alias to include untracked files when stashing.
 - Updated `gup` function to include summarized git log of fetched changes.
 
-# 13.1.0 (2014-11-02)
+# v13.1.0 (2014-11-02)
 
 - Removed Homebrew aliases for managing services (Homebrew no longer supports these commands).
 - Updated JavaScript pre-commit Git hook to check for closing tag in `console.log();` statements.
@@ -742,7 +742,7 @@
 - Added Git pre-commit hook for preventing JavaScript `debugger;` statements.
 - Added Git pre-commmit hook for detecting JavaScript `alert();` statements.
 
-# 13.0.0 (2014-10-20)
+# v13.0.0 (2014-10-20)
 
 - Removed the "githubi" function.
 - Removed the "tfollowers" function.
@@ -768,7 +768,7 @@
 - Refactored Bash scripts to .bash folder.
 - Refactored home_files with .tt extension.
 
-# 12.2.0 (2014-10-12)
+# v12.2.0 (2014-10-12)
 
 - Fixed "gbdm" function so that only locally merged branches are deleted.
 - Fixed dotfile symlinking for nested folder structures.
@@ -782,7 +782,7 @@
 - Added custom Git commit message.
 - Added .mackup.cfg home file.
 
-# 12.1.0 (2014-09-29)
+# v12.1.0 (2014-09-29)
 
 - Fixed "gsup" function to only report yesterday's Git log activity.
 - Fixed dotfile deletion so symbolic links are included too.
@@ -805,7 +805,7 @@
 - Added Bash Powerline prompt support.
 - Added Go workspace path.
 
-# 12.0.0 (2014-08-10)
+# v12.0.0 (2014-08-10)
 
 - Removed the 'p' option for "gh" function (replaced with 'r' instead).
 - Removed the "rfixes" alias (use "bernf" instead).
@@ -832,7 +832,7 @@
 - Added 'g' option to "gh" function for opening GitHub project graphs.
 - Added 'p' option to "gh" function for opening GitHub project pulse.
 
-# 11.0.0 (2014-06-21)
+# v11.0.0 (2014-06-21)
 
 - Removed the "gres" alias (renamed to "grh" instead).
 - Removed the "glamelog" function (renamed to "glamel" instead).
@@ -860,7 +860,7 @@
 - Updated Bash prompt colors.
 - Updated all aliases using "rake" to pass through bundle exec (or binstubs if available) instead.
 
-# 10.0.0 (2014-04-24)
+# v10.0.0 (2014-04-24)
 
 - Removed Espresso files from .gitignore.
 - Removed .sass-cache from .gitignore.
@@ -894,7 +894,7 @@
 - Added project information to "gcap" function output.
 - Added [Priscilla](https://github.com/Arkham/priscilla) gem support to .irbrc.
 
-# 9.0.0 (2014-02-17)
+# v9.0.0 (2014-02-17)
 
 - Removed the PostgreSQL aliases.
 - Updated Gemsmith aliases to use "gs" prefixes.
@@ -919,7 +919,7 @@
 - Refactored the "gashd" alias to be a function with multiple stash prompt support.
 - Refactored the "gashl" alias to a function.
 
-# 8.1.0 (2013-12-03)
+# v8.1.0 (2013-12-03)
 
 - Fixed install requirements to only point to the OSX project.
 - Fixed "gls" alias so that search results no longer include graph information.
@@ -933,7 +933,7 @@
 - Added "tags" to .gitignore.
 - Added Pow HTTPS support.
 
-# 8.0.0 (2013-10-12)
+# v8.0.0 (2013-10-12)
 
 - Fixed "dots" function bug where supplying an option to bypass the options prompt would throw an error.
 - Fixed "dots" function so that leading whitespace is properly trimmed from labels and descriptions.
@@ -967,7 +967,7 @@
 - Added the "gdm" and "gdtm" aliases.
 - Added the "gdtc" alias for showing a diff of cached/staged changes within difftool.
 
-# 7.0.0 (2013-09-21)
+# v7.0.0 (2013-09-21)
 
 - Fixed function signatures where some functions were missing "()".
 - Removed the "gus" alias for "git reset HEAD".
@@ -998,7 +998,7 @@
 - Enhanced shell prompt to show git branch and committer email address in a blue background.
 - Enhanced the dots function to print function name and description information.
 
-# 6.0.0 (2013-08-13)
+# v6.0.0 (2013-08-13)
 
 - Fixed 'l1' alias so that it lists dotfiles (minus . and ..).
 - Switched to using sub-shells when traversing sub-directories for all functions.
@@ -1028,7 +1028,7 @@
 - Added missing CHANGELOG, LICENSE, and README files.
 - Added NPM to PATH.
 
-# 5.2.0 (2013-05-22)
+# v5.2.0 (2013-05-22)
 
 - Force default Git editor to wait for files to be closed before returning.
 - Updated shell script documentation.
@@ -1041,7 +1041,7 @@
 - Moved git grep (gg) next to git search git log search (gls).
 - Dropped the glc alias in favor of the guthors alias (uses the author summary originally provided by the glc alias).
 
-# 5.1.0 (2013-05-11)
+# v5.1.0 (2013-05-11)
 
 - Fixed bug with sublime not being defined prior to loading bash_- files as a necessary dependency.
 - Fixed bug with opf alias where paths with spaces would fail to open properly.
@@ -1066,7 +1066,7 @@
 - Added gasha function which answers the git stash size of all projects in current directory.
 - Renamed instance variable 'directory' to 'project' in directory loops for Bash functions.
 
-# 5.0.0 (2013-04-20)
+# v5.0.0 (2013-04-20)
 
 - Fixed the timeout comment in the pow config.
 - Fixed 'Enhancements' spelling typo in irbrc file.
@@ -1092,7 +1092,7 @@
 - Bumped IRB Eval History to 1000.
 - Reduced Bash history size to 1000.
 
-# 4.1.0 (2013-04-14)
+# v4.1.0 (2013-04-14)
 
 - Applied RubyGems 2.0.0 syntax upgrades.
 - Added the powconfig file. Thanks Eric.
@@ -1120,7 +1120,7 @@
 - Added the gday function to report git activity across all projects for today only.
 - Refactored the duplicate gsup and gday function code into the gince function.
 
-# 4.0.0 (2013-03-17)
+# v4.0.0 (2013-03-17)
 
 - Removed the extra spacing before time in the 'gld' alias.
 - Split Bash aliases and functions into separate files.
@@ -1148,7 +1148,7 @@
 - Added the rdd bash alias (i.e. rm -rf _doc).
 - Applied Code Climate GPA badge.
 
-# 3.0.0 (2013-01-27)
+# v3.0.0 (2013-01-27)
 
 - Added ipa alias.
 - Added the groot alias. Thanks Eoin.
@@ -1197,7 +1197,7 @@
 - Removed the bers alias and replaced with the bes and bess aliases for using RSpec.
 - Removed the Ruby install script and added a Bash script instead.
 
-# 2.2.0 (2012-07-04)
+# v2.2.0 (2012-07-04)
 
 - Fixed awesome_print requirement for .irbrc.
 - Removed the .railsrc file and added the "rew" fuction to the .bashrc file with support for multi-template setup.
@@ -1214,7 +1214,7 @@
 - Added IRB auto-completion and history support.
 - Added the GitHub Dotfiles project to the README.
 
-# 2.1.0 (2012-04-15)
+# v2.1.0 (2012-04-15)
 
 - Fixed checkout instructions.
 - Fixed issues with IRB and Rails IRB command prompts.
@@ -1240,7 +1240,7 @@
 - Updated README with link to Mathias Bynens' dotfiles project.
 - Removed the aliases for clearing rails logs since the rake:log clear tasks does this now.
 
-# 2.0.0 (2012-01-28)
+# v2.0.0 (2012-01-28)
 
 - Fixed the bch and rebundle aliases.
 - Added .sass-cache to .gitignore.
@@ -1255,7 +1255,7 @@
 - Removed the binary warning flag.
 - Removed the rdemo and rdemot .bashrc aliases.
 
-# 1.2.0 (2011-12-17)
+# v1.2.0 (2011-12-17)
 
 - Added the glast, gres, and grev Git aliases.
 - Removed the ActionView and route configurations from the railsrc.txt file.
@@ -1275,11 +1275,11 @@
 - Added RVM fix for loading new Ruby environments when creating new terminal tabs.
 - Updated README with new Gemsmith specs.
 
-# 1.1.0 (2011-07-19)
+# v1.1.0 (2011-07-19)
 
 - Removed FileUtils requirement for setup.rb.
 - Added existing file check with corresponding console notification.
 
-# 1.0.0 (2011-07-16)
+# v1.0.0 (2011-07-16)
 
 - Initial version.
