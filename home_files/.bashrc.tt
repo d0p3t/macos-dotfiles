@@ -30,11 +30,11 @@ export HISTIGNORE="..:...:c:h:l:l1:p:pwd:gst:gd:exit:* --help" # Exclude mundane
 # Command Prompt (http://jonisalonen.com/2012/your-bash-prompt-needs-this)
 . "$HOME/.bash/prompt.sh"
 
-# Homebrew
+# Homebrew (http://brew.sh)
 export HOMEBREW_NO_ANALYTICS=1
 export PATH="/usr/local/sbin:$PATH"
 
-# Bash Completion
+# Bash Completion (http://bash-completion.alioth.debian.org)
 if [[ -f /usr/local/etc/bash_completion ]]; then
   . /usr/local/etc/bash_completion
 fi
@@ -45,7 +45,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 # Git
 source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
 
-# GPG
+# GPG (https://www.gnupg.org)
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -56,32 +56,32 @@ if [ -f "${HOME}/.gpg-agent-info" ]; then
   export SSH_AGENT_PID
 fi
 
-# Go
+# Go (https://golang.org)
 if [[ -e /usr/local/bin/go ]]; then
   export GOPATH=$HOME/Apps/Go
   export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 fi
 
-# direnv
+# direnv (http://direnv.net)
 if [[ -e /usr/local/bin/direnv ]]; then
   eval "$(direnv hook bash)"
 fi
 
-# chruby
+# chruby (https://github.com/postmodern/chruby)
 if [[ -e /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/chruby.sh
   source /usr/local/share/chruby/auto.sh
 fi
 
-# Node.js
+# Node.js (http://nodejs.org)
 export PATH="$PATH:/usr/local/share/npm/bin"
 
-# Travis CI
+# Travis CI (https://travis-ci.org)
 if [[ -e "$HOME/.travis/travis.sh" ]]; then
   source "$HOME/.travis/travis.sh"
 fi
 
-# Z
+# Z (https://github.com/rupa/z)
 if [[ -e /usr/local/etc/profile.d/z.sh ]]; then
   . /usr/local/etc/profile.d/z.sh
 fi
