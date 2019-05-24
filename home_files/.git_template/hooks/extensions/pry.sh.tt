@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/bin/bash
 
 # Label: Pry Binding
 # Description: Detect Pry debug statements.

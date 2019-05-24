@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/bin/bash
 
 # Label: Scan Code
 # Description: Scan for invalid code.
