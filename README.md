@@ -41,10 +41,12 @@ more.
     - [RSpec](#rspec)
     - [Ruby on Rails](#ruby-on-rails)
     - [Elm](#elm)
+    - [Jasmine](#jasmine)
     - [Rubocop](#rubocop)
     - [Rails Best Practices](#rails-best-practices)
     - [SimpleCov](#simplecov)
     - [Foreman](#foreman)
+    - [Swift](#swift)
     - [Silver Surfer](#silver-surfer)
     - [direnv](#direnv)
     - [Z](#z)
@@ -54,6 +56,7 @@ more.
     - [Sublime Text](#sublime-text)
     - [Marked 2](#marked-2)
     - [asciinema](#asciinema)
+    - [Unused](#unused)
   - [Functions](#functions)
     - [General](#general-1)
     - [less](#less)
@@ -75,6 +78,7 @@ more.
     - [RailRoady](#railroady)
     - [Elm](#elm-1)
     - [Travis CI](#travis-ci)
+    - [Image Magick](#image-magick)
     - [FFmpeg](#ffmpeg)
     - [asciinema](#asciinema-1)
     - [Dotfiles](#dotfiles)
@@ -103,7 +107,6 @@ more.
 - Configures the [Ruby](https://www.ruby-lang.org) `.ruby-version` and `.irbrc` files.
 - Configures the [Pry](http://pry.github.com) `.pryrc` file.
 - Configures the [Ruby Debugger](http://bashdb.sourceforge.net/ruby-debug.html) `.rdebugrc` file.
-- Configures the [Rails ERD](https://voormedia.github.io/rails-erd) `.erdconfig` file.
 - Configures the [RSpec](http://rspec.info) `.rspec` file.
 - Configures the [Awesome Print](https://github.com/michaeldv/awesome_print) `.aprc` file.
 - Configures the [Pow](http://pow.cx) `.powconfig` file.
@@ -138,7 +141,7 @@ Current Version (stable)
 
     git clone https://github.com/bkuhlmann/dotfiles.git
     cd dotfiles
-    git checkout v26.0.0
+    git checkout v25.2.0
 
 Master Version (unstable)
 
@@ -273,6 +276,8 @@ When upgrading to a new version, run the following:
     gbn = "_git_branch_name | _copy_and_print"
     gbr = "git branch --move"
     gm = "git merge"
+    gms = "git merge --squash"
+    gma = "git merge --abort"
     gcl = "git clone"
     gch = "git checkout"
     gchm = "git checkout master"
@@ -288,7 +293,7 @@ When upgrading to a new version, run the following:
     gcf = "git commit --fixup"
     gcs = "git commit --squash"
     gamend = "git commit --amend"
-    gamendh = "git commit --amend --no-edit"
+    gamendh = "git commit --all --amend --no-edit"
     gcp = "git cherry-pick"
     gcpa = "git cherry-pick --abort"
     gashc = "git stash clear"
@@ -303,6 +308,7 @@ When upgrading to a new version, run the following:
     gpu = "git pull"
     gpuo = "git pull origin"
     gpuom = "git pull origin master"
+    grim = "gri master"
     grbc = "git rebase --continue"
     grbs = "git rebase --skip"
     grba = "git rebase --abort"
@@ -374,6 +380,7 @@ When upgrading to a new version, run the following:
 ### [Milestoner](https://github.com/bkuhlmann/milestoner)
     ms = "milestoner"
     msc = 'milestoner --commits | _copy_and_print "\n"'
+    mst = "milestoner --tag"
     msp = "milestoner --publish"
     mse = "milestoner --config --edit"
 ### [Gemsmith](https://github.com/bkuhlmann/gemsmith)
@@ -396,10 +403,16 @@ When upgrading to a new version, run the following:
     scs = "sc --sandbox"
     sgc = "sg controller"
     sgm = "sg model"
+    sgh = "sg helper"
+    sgs = "sg scaffold"
     dbd = "ber db:drop"
     dbc = "ber db:create"
     dbm = "ber db:migrate"
     dbmt = "ber db:migrate && ber db:rollback && ber db:migrate"
+    assp = "ber assets:precompile"
+    assc = "ber assets:clean"
+    notest = "ber notes:custom ANNOTATION=TODO"
+    notesf = "ber notes:custom ANNOTATION=FIX"
     taild = "tail -f log/development.log"
     tailt = "tail -f log/test.log"
     res = "touch tmp/restart.txt"
@@ -409,6 +422,9 @@ When upgrading to a new version, run the following:
     elmp = "elm package"
     elmi = "elm package install"
     elmt = "elm test"
+### [Jasmine](http://jasmine.github.io)
+    berj = "ber jasmine"
+    berjci = "ber jasmine:ci"
 ### [Rubocop](https://github.com/bbatsov/rubocop)
     cop = "rubocop --display-cop-names"
     copc = "rubocop --auto-gen-config"
@@ -422,6 +438,8 @@ When upgrading to a new version, run the following:
     cov = "open coverage/index.html"
 ### [Foreman](https://github.com/ddollar/foreman)
     fms = "foreman start --env /dev/null"
+### [Swift](https://developer.apple.com/swift)
+    swift = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift"
 ### [Silver Surfer](https://github.com/ggreer/the_silver_searcher)
     agf = "ag --hidden --files-with-matches --file-search-regex"
 ### [direnv](http://direnv.net)
@@ -444,6 +462,8 @@ When upgrading to a new version, run the following:
     cin = "asciinema"
     cinp = "asciinema play"
     cinu = "asciinema upload"
+### [Unused](https://unused.codes)
+    ud = "unused --stdin < .tags"
 
 ## Functions
 
@@ -574,6 +594,8 @@ When upgrading to a new version, run the following:
     tcies = Travis CI Encrypt Slack - Encrypts and adds Code Climate token to notifications.slack section of YAML.
     tciec = Travis CI Encrypt Code Climate - Encrypts and adds Code Climate token to env.global section of YAML.
     tciea = Travis CI Encrypt (all) - Encrypt string for Travis CI-enabled projects in current directory.
+### [Image Magick](http://www.imagemagick.org)
+    sketch = Sketch - Convert photo into a sketch. Inspired by [Whiteboard Cleaner Gist](https://gist.github.com/lelandbatey/8677901).
 ### [FFmpeg](http://www.ffmpeg.org)
     gifize = Gifize - Convert video to animated GIF.
 ### [asciinema](https://asciinema.org)
