@@ -1,12 +1,10 @@
---fields=+l
---languages=-sql
---recurse=yes
 --sort=yes
+--recurse=yes
 --tag-relative=yes
+--languages=-sql
 
 --exclude=.DS_Store
 --exclude=*.git*
---exclude=*.min.js
 --exclude=elm-stuff
 --exclude=log
 --exclude=node_modules
