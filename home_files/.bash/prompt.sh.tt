@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+# BASH PROMPT
 
 # The following was inspired by the original Powerline port by Riobard Zhan (https://github.com/riobard/bash-powerline).
 
