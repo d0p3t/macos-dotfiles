@@ -22,7 +22,6 @@ more.
       - [General](#general)
       - [Bash](#bash)
       - [Network](#network)
-      - [Fuzzy Finder](#fuzzy-finder)
       - [tmux](#tmux)
       - [Homebrew](#homebrew)
       - [Git](#git)
@@ -133,7 +132,7 @@ Current Version (stable)
 
     git clone https://github.com/bkuhlmann/dotfiles.git
     cd dotfiles
-    git checkout 32.1.0
+    git checkout 32.0.0
 
 Master Version (unstable)
 
@@ -185,16 +184,13 @@ When upgrading to a new version, run the following:
     c = "clear"
     h = "history"
     l = "ls -alhT"
-    o = "open"
-    p = 'pwd | tr -d "\r\n" | _copy_and_print'
-    du = "ncdu -e --color dark"
     l1 = "ls -A1 | _copy_and_print '\n'"
-    cat = "bat --theme DarkNeon"
+    p = 'pwd | tr -d "\r\n" | _copy_and_print'
+    o = "open"
+    cat = 'ccat -G Keyword = "turquoise" -G Punctuation="green" -G Decimal="green" -G Type="blue" -G Literal="blue" -G String="lightgray" -G Plaintext="white"'
     home = "cd $HOME"
     man = "gem man --system"
-    ping = "prettyping --nolegend"
     rmde = "find . -type d -empty -not -path '*.git*' -delete"
-    top = "htop"
 #### [Bash](https://www.gnu.org/software/bash)
     bashe = "$EDITOR $HOME/.config/bash/env.sh"
     bashs = "exec $SHELL"
@@ -206,8 +202,6 @@ When upgrading to a new version, run the following:
     dnsi = "scutil --dns"
     dnss = "sudo dscacheutil -statistics"
     dnsf = "sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && printf 'DNS cache cleared.\n'"
-#### [Fuzzy Finder](https://github.com/junegunn/fzf)
-    ff = "fzf --preview 'bat --theme DarkNeon --color always {}'"
 #### [tmux](http://tmux.sourceforge.net)
     tsl = "tmux list-sessions"
     tsa = "tmux attach-session -t"
@@ -301,7 +295,6 @@ When upgrading to a new version, run the following:
     gpu = "git pull"
     gpuo = "git pull origin"
     gpuom = "git pull origin master"
-    grbo = "git rebase --onto"
     grbc = "git rebase --continue"
     grbd = "git rebase --show-current-patch"
     grbs = "git rebase --skip"
@@ -405,11 +398,10 @@ When upgrading to a new version, run the following:
     crs = "crystal spec"
 #### [Elm](http://elm-lang.org)
     elmc = "elm repl"
-    elmg = "elm init"
-    elmi = "elm install"
     elms = "elm reactor"
-    elmt = "elm-test"
-    elmp = "elm publish"
+    elmp = "elm package"
+    elmi = "elm package install --yes"
+    elmt = "elm test"
 #### [Rubocop](https://github.com/bbatsov/rubocop)
     cop = "rubocop --parallel --display-cop-names --display-style-guide"
     copc = "rubocop --auto-gen-config"
@@ -453,7 +445,7 @@ When upgrading to a new version, run the following:
 
 #### General
     t2s = Tab to Space - Convert file from tab to space indendation.
-    cype = Colorized Type - Identical to "type" system command but with Bat support.
+    cype = Colorized Type - Identical to "type" command functionality but with syntax highlighting.
     pss = Process Status (specialized) - Display process status (excluding current process) and ignoring case.
     kilp = Kill Process - Kill errant processes.
 #### [less](http://en.wikipedia.org/wiki/Less_(Unix))
@@ -482,7 +474,6 @@ When upgrading to a new version, run the following:
     gistory = Git File History - View file commit history (with optional diff support).
     glameh = Git Blame History - View file commit history for a specific file and/or lines (with optional diff support).
     guthorsa = Git Authors (all) - Answer author commit activity per project (ranked highest to lowest).
-    guthorc = Git Author Contributions - Answers total lines added/removed by author for repo (with emphasis on deletion).
     gsta = Git Status (all) - Answer status of projects with uncommited/unpushed changes.
     gup = Git Update - Fetch commits, prune untracked references, review each commit (optional, with diff), and pull (optional).
     gync = Git Sync - Syncs up remote changes and deletes pruned/merged branches.
@@ -577,7 +568,7 @@ When upgrading to a new version, run the following:
     rr = RailRoady Models - Generate diagrams for Rails models, controllers, or states.
 #### [Elm](http://elm-lang.org)
     elmm = Elm Make - Compile Elm source.
-    elml = Elm Live - Watch for source code changes and recompile immediately.
+    elml = Elm Live Reload - Watch for source code changes and recompile immediately.
 #### [asciinema](https://asciinema.org)
     cinr = asciinema Record - Create new asciinema recording.
 #### [Overmind](https://github.com/DarthSim/overmind)
