@@ -32,12 +32,11 @@
 [commit]
   template = ~/.git_template/commit_message.txt
 [core]
-  quotepath = false
-  untrackedcache = true
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   editor = "$EDITOR --wait"
   excludesfile = ~/.gitignore
-  hooksPath = ~/.git_template/hooks
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  quotepath = false
+  untrackedcache = true
 [interactive]
   singleKey = true
 [status]
