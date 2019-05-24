@@ -5,7 +5,7 @@
 brakeman_check() {
   if _check_gem_dependencies "brakeman"; then
     printf "[brakeman]: "
-    bundle exec brakeman --summary
+    bundle exec brakeman
   fi
 }
 export -f brakeman_check
