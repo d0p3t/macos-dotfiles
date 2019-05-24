@@ -70,7 +70,6 @@
   fullname = true
   threads = 3
 [diff]
-  algorithm = patience
   indentHeuristic = true
   mnemonicPrefix = true
   renames = copies
