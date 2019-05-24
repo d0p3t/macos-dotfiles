@@ -81,9 +81,6 @@ if [[ -e "$HOME/.travis/travis.sh" ]]; then
   source "$HOME/.travis/travis.sh"
 fi
 
-# Yarn
-export PATH="$PATH:$(yarn global bin)"
-
 # Z
 if [[ -e /usr/local/etc/profile.d/z.sh ]]; then
   . /usr/local/etc/profile.d/z.sh
