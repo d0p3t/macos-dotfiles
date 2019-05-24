@@ -33,7 +33,6 @@ more.
         - [Ruby](#ruby)
         - [Ruby Gems](#ruby-gems)
         - [Ruby Gems Whois](#ruby-gems-whois)
-        - [Rake](#rake)
         - [Bundler](#bundler)
         - [Milestoner](#milestoner)
         - [Gemsmith](#gemsmith)
@@ -44,13 +43,11 @@ more.
         - [Jasmine](#jasmine)
         - [Rubocop](#rubocop)
         - [Rails Best Practices](#rails-best-practices)
-        - [SimpleCov](#simplecov)
         - [Foreman](#foreman)
         - [Swift](#swift)
         - [Silver Surfer](#silver-surfer)
         - [direnv](#direnv)
         - [Z](#z)
-        - [iTerm](#iterm)
         - [Path Finder](#path-finder)
         - [Vim](#vim)
         - [Sublime Text](#sublime-text)
@@ -136,7 +133,7 @@ Current Version (stable)
 
     git clone https://github.com/bkuhlmann/dotfiles.git
     cd dotfiles
-    git checkout v24.0.0
+    git checkout v23.0.0
 
 Master Version (unstable)
 
@@ -359,8 +356,7 @@ When upgrading to a new version, run the following:
     gemcli = "ag --depth=1 --files-with-matches --file-search-regex gemspec executables | xargs basename | cut -d. -f1 | _copy_and_print 'n'"
 ##### [Ruby Gems Whois](https://github.com/jnunemaker/gemwhois)
     gemw = "gem whois"
-##### [Rake](https://github.com/ruby/rake)
-    bert = "ber -T"
+    berc = "bundle exec rake console"
 ##### [Bundler](http://bundler.io)
     b = "bundle"
     bs = "bundle show"
@@ -380,17 +376,13 @@ When upgrading to a new version, run the following:
     mse = "milestoner --config --edit"
 ##### [Gemsmith](https://github.com/bkuhlmann/gemsmith)
     gs = "gemsmith"
-    gsg = "gemsmith --generate"
-    gse = "gemsmith --config --edit"
+    gse = "gemsmith --edit"
     gsr = "gemsmith --read"
     gso = "gemsmith --open"
-    gsi = "bundle exec rake install"
-    gsp = "bundle exec rake publish"
 ##### [Pragmater](https://github.com/bkuhlmann/pragmater)
     pas = "pragmater --add . --comments '# frozen_string_literal: true' --whitelist 'Gemfile' 'Guardfile' 'Rakefile' 'config.ru' 'bin/**/*' '.gemspec' '.rake' '.rb'"
 ##### [RSpec](http://rspec.info)
     bess = "bes spec"
-    best = "bess --tag"
     besn = "bess --next-failure"
     besf = "bess --only-failures"
 ##### [Ruby on Rails](http://rubyonrails.org)
@@ -429,8 +421,6 @@ When upgrading to a new version, run the following:
     cops = "rubocop --show-cops"
 ##### [Rails Best Practices](https://github.com/railsbp/rails_best_practices)
     rbp = "rails_best_practices"
-##### [SimpleCov](https://github.com/colszowka/simplecov)
-    cov = "open coverage/index.html"
 ##### [Foreman](https://github.com/ddollar/foreman)
     fms = "foreman start --env /dev/null"
 ##### [Swift](https://developer.apple.com/swift)
@@ -599,10 +589,7 @@ When upgrading to a new version, run the following:
     java_script_console = JavaScript Console - Detect JavaScript console statements.
     java_script_alert = JavaScript Alert - Detect JavaScript alert statements.
     pry_binding = Pry Binding - Detect Pry debug statements.
-    reek_check = Reek - Scans Ruby code for poor style choices.
-    rspec_focus = RSpec Focus - Detect RSpec focus.
-    rubocop_check = Rubocop - Scans Ruby code for poor style choices.
-    scss_lint_check = SCSS Lint - Scans SCSS code for poor style choices.
+    rspec_focus = RSpec Focus - Detect RSpec focus metadata.
 
 #### IRB, Pry, and Rails consoles
 
