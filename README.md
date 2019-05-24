@@ -55,7 +55,6 @@ more.
     - [Functions](#functions)
       - [General](#general-1)
       - [less](#less)
-      - [License Finder](#license-finder)
       - [OpenSSL](#openssl)
       - [curl](#curl)
       - [lsof](#lsof)
@@ -130,7 +129,7 @@ Current Version (stable)
 
     git clone https://github.com/bkuhlmann/dotfiles.git
     cd dotfiles
-    git checkout 31.3.0
+    git checkout 31.2.0
 
 Master Version (unstable)
 
@@ -219,7 +218,7 @@ When upgrading to a new version, run the following:
     hbpu = "brew unpin"
     hbd = "brew doctor"
     hbc = "brew cleanup"
-    hbsu = "brew update && brew upgrade --cleanup && brew cleanup"
+    hbsu = "hbup && hbug && hbc"
 #### [Git](http://git-scm.com)
     gi = "git init"
     gcle = "git config --local --edit"
@@ -294,7 +293,6 @@ When upgrading to a new version, run the following:
     gpuo = "git pull origin"
     gpuom = "git pull origin master"
     grbc = "git rebase --continue"
-    grbd = "git rebase --show-current-patch"
     grbs = "git rebase --skip"
     grba = "git rebase --abort"
     ger = "git rerere"
@@ -442,9 +440,6 @@ When upgrading to a new version, run the following:
     kilp = Kill Process - Kill errant processes.
 #### [less](http://en.wikipedia.org/wiki/Less_(Unix))
     lessi = Less Interactive - Inspect file, interactively.
-#### [License Finder](https://github.com/pivotal/LicenseFinder)
-    licensei = License Finder (include) - Include license in global list.
-    licensea = License Finder (add) - Adds library to global list.
 #### [OpenSSL](https://openssl.org)
     sslc = SSL Certificate Creation - Create SSL certificate.
 #### [curl](http://curl.haxx.se)
