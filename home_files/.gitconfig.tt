@@ -47,8 +47,6 @@
   singleKey = true
 [status]
   showUntrackedFiles = all
-[fetch]
-  prune = true
 [pull]
   rebase = true
 [push]
