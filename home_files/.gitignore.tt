@@ -29,9 +29,6 @@
 # RubyMine
 *.idea
 
-# Rubocop
-.rubocop-http*
-
 # SimpleCov
 coverage
 
