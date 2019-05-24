@@ -14,7 +14,6 @@ source $HOME/.git_template/hooks/extensions/support.sh
 source $HOME/.git_template/hooks/extensions/comments.sh
 source $HOME/.git_template/hooks/extensions/reek.sh
 source $HOME/.git_template/hooks/extensions/rubocop.sh
-source $HOME/.git_template/hooks/extensions/scss_lint.sh
 
 # EXECUTION
 zeros=0000000000000000000000000000000000000000
@@ -24,7 +23,6 @@ while read local_ref local_sha remote_ref remote_sha; do
     comments_total
     reek_check
     rubocop_check
-    scss_lint_check
   fi
 done
 
