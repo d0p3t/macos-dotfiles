@@ -64,7 +64,6 @@
   prompt = false
 [diff]
   mnemonicPrefix = true
-  compactionHeuristic = true
   renames = true
   tool = Kaleidoscope
 [mergetool "Kaleidoscope"]
@@ -74,7 +73,7 @@
   prompt = false
 [merge]
   tool = Kaleidoscope
-  conflictStyle = diff3
+  conflictstyle = diff3
 [tag]
   sort = version:refname
 [url "git@github.com:"]
