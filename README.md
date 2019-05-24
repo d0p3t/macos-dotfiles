@@ -116,6 +116,7 @@ more.
 - Adds [direnv](http://direnv.net) support.
 - Adds [chruby](https://github.com/postmodern/chruby) support.
 - Adds [Node.js](http://nodejs.org) support.
+- Adds [Travis CI](https://travis-ci.org) support.
 - Adds [Z](https://github.com/rupa/z) support.
 
 ## Screencast
@@ -594,10 +595,10 @@ When upgrading to a new version, run the following:
 
 ### IRB, Pry, and Rails consoles
 
-    CK.locate - Locates source code for given object and method.
-    CK.search - Searches for object method for given pattern.
-    CK.copy - Copies data to OS X clipboard.
-    CK.paste - Pastes data from OS X clipboard.
+    ConsoleKit.locate - Locates source code for given object and method.
+    ConsoleKit.search - Searches for object method for given pattern.
+    ConsoleKit.copy - Copies data to OS X clipboard.
+    ConsoleKit.paste - Pastes data from OS X clipboard.
 
 ### Pry Aliases
 
