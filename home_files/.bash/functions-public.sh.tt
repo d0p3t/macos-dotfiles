@@ -455,13 +455,14 @@ gup() {
     case $response in
       'y')
         git difftool $commit^!;;
-      'n');;
-      'q');;
+      'n')
+        continue;;
+      'q')
+        break;;
       *)
-        printf "ERROR: Invalid option.\n";;
+        printf "ERROR: Invalid option.\n"
+        break;;
     esac
-
-    break
   done
 
   hr '-'
@@ -1314,7 +1315,6 @@ gh() {
       else
         _process_gh_option "$1" "$2" "$3"
       fi
-      break
     done
   else
     printf "ERROR: Not a Git repository!\n"
@@ -1737,7 +1737,6 @@ rew() {
         printf "\n"
         _process_rew_option "$1" $response "$3"
       fi
-      break
     done
   else
     printf "ERROR: Rails application name must be supplied.\n"
@@ -1985,6 +1984,5 @@ dots() {
     else
       _process_dots_option $1 "$2"
     fi
-    break
   done
 }

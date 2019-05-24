@@ -322,11 +322,14 @@ _process_gh_file_option() {
 _process_gh_branch_option() {
   case $1 in
     'c')
-      open "$(_gh_url)/tree/$(_git_branch_name)";;
+      open "$(_gh_url)/tree/$(_git_branch_name)"
+      break;;
     'r')
-      open "$(_gh_url)/compare/$(_git_branch_name)?expand=1";;
+      open "$(_gh_url)/compare/$(_git_branch_name)?expand=1"
+      break;;
     *)
-      open "$(_gh_url)/branches";;
+      open "$(_gh_url)/branches"
+      break;;
   esac
 }
 
@@ -368,32 +371,46 @@ _process_gh_url_option() {
 _process_gh_option() {
   case $1 in
     'o')
-      open $(_gh_url);;
+      open $(_gh_url)
+      break;;
     'i')
-      open "$(_gh_url)/issues";;
+      open "$(_gh_url)/issues"
+      break;;
     'c')
-      _process_gh_commit_option "$2";;
+      _process_gh_commit_option "$2"
+      break;;
     'f')
-      _process_gh_file_option "$2" "$3";;
+      _process_gh_file_option "$2" "$3"
+      break;;
     'b')
-      _process_gh_branch_option "$2";;
+      _process_gh_branch_option "$2"
+      break;;
     't')
-      open "$(_gh_url)/tags";;
+      open "$(_gh_url)/tags"
+      break;;
     'r')
-      _process_gh_pull_request_option "$2";;
+      _process_gh_pull_request_option "$2"
+      break;;
     'w')
-      open "$(_gh_url)/wiki";;
+      open "$(_gh_url)/wiki"
+      break;;
     'p')
-      open "$(_gh_url)/pulse";;
+      open "$(_gh_url)/pulse"
+      break;;
     'g')
-      open "$(_gh_url)/graphs";;
+      open "$(_gh_url)/graphs"
+      break;;
     's')
-      open "$(_gh_url)/settings";;
+      open "$(_gh_url)/settings"
+      break;;
     'u')
-      _process_gh_url_option "$2";;
-    'q');;
+      _process_gh_url_option "$2"
+      break;;
+    'q')
+      break;;
     *)
-      printf "ERROR: Invalid option.\n";;
+      printf "ERROR: Invalid option.\n"
+      break;;
   esac
 }
 
@@ -439,18 +456,25 @@ _process_rew_option() {
 
   case $2 in
     "default")
-      _create_rails_skeleton "$1";;
+      _create_rails_skeleton "$1"
+      break;;
     "custom")
-      _create_rails_skeleton "$1" "$flags";;
+      _create_rails_skeleton "$1" "$flags"
+      break;;
     "slim")
-      _create_rails_skeleton "$1" "$flags_with_template https://raw.github.com/bkuhlmann/rails_slim_template/$branch/template.rb";;
+      _create_rails_skeleton "$1" "$flags_with_template https://raw.github.com/bkuhlmann/rails_slim_template/$branch/template.rb"
+      break;;
     "setup")
-      _create_rails_skeleton "$1" "$flags_with_template https://raw.github.com/bkuhlmann/rails_setup_template/$branch/template.rb";;
+      _create_rails_skeleton "$1" "$flags_with_template https://raw.github.com/bkuhlmann/rails_setup_template/$branch/template.rb"
+      break;;
     "dummy")
-      _create_rails_skeleton "$1" "$flags_with_template https://raw.github.com/bkuhlmann/rails_dummy_template/$branch/template.rb";;
-    'q');;
+      _create_rails_skeleton "$1" "$flags_with_template https://raw.github.com/bkuhlmann/rails_dummy_template/$branch/template.rb"
+      break;;
+    'q')
+      break;;
     *)
-      printf "ERROR: Invalid option.\n";;
+      printf "ERROR: Invalid option.\n"
+      break;;
   esac
 }
 
@@ -600,17 +624,24 @@ _find_command() {
 _process_dots_option() {
   case $1 in
     'a')
-      _print_aliases | more;;
+      _print_aliases | more
+      break;;
     'f')
-      _print_functions | more;;
+      _print_functions | more
+      break;;
     'g')
-      _print_git_hooks | more;;
+      _print_git_hooks | more
+      break;;
     'p')
-      _print_all | more;;
+      _print_all | more
+      break;;
     's')
-      _find_command "$2" | more;;
-    'q');;
+      _find_command "$2" | more
+      break;;
+    'q')
+      break;;
     *)
-      printf "ERROR: Invalid option.\n";;
+      printf "ERROR: Invalid option.\n"
+      break;;
   esac
 }
