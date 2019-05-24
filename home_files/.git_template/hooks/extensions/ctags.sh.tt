@@ -12,7 +12,7 @@ ctags_rebuild() {
     ctags --languages=-sql -f $tag_file
     printf "$label: CTags rebuilt.\n"
   else
-     _print_error "$label: Exuberant CTags not found. To install, run: brew install ctags."
+     printf "$label: Exuberant CTags not found. To install, run: brew install ctags."
      exit 1
   fi
 }

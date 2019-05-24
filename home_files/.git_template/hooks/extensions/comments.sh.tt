@@ -22,7 +22,7 @@ _comment_total() {
   done
 
   if [[ $total > 0 ]]; then
-    _print_warning "$label: $total $prefix"
+    printf "%s\n" "$label: $total $prefix"
   fi
 }
 
