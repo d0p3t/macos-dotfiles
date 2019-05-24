@@ -1,81 +1,106 @@
-# BASHRC
+#! /usr/bin/env bash
 
-# General
-shopt -s globstar
+if [[ BASH_VERSINFO[0] < 4 ]]; then
+  printf "%s\n" "WARNING: Dotfiles requires Bash 4.x.x or higher to work correctly."
+fi
+
+# Checks the window size after each command and, if necessary, updates LINES and COLUMNS values.
+shopt -s checkwinsize
+
+# Attempts to save all lines of a multi-line command as a single history entry for easy re-editing.
+shopt -s cmdhist
+
+# Attempts word spelling correction on directory names if directory name supplied does not exist.
+shopt -s dirspell
+
+# Enables extended pattern matching features.
 shopt -s extglob
+
+# Using ** in a pathname expansion context will match all files and zero or more directories and
+# subdirectories. If the pattern is followed by a /, only directories and subdirectories match.
+shopt -s globstar
+
+# The history list is appended (instead of being overwritten) as defined by the HISTFILE variable.
+shopt -s histappend
+
+# Enables history expansion with space (i.e. `!!<space>`).
+bind Space:magic-space
 
 # Default Editors
 export EDITOR=sublime
 export VISUAL=vim
 
 # History
+export HISTFILE="$HOME/.config/bash/history.log"
 export HISTTIMEFORMAT="%F %T " # Use YYYY-MM-DD HH:MM:SS date/time format.
 export HISTCONTROL="erasedups:ignoreboth" # Remove duplicate entries.
 export HISTSIZE=10000 # Keep lengthy command history.
 export HISTIGNORE="..:...:c:h:l:l1:p:pwd:gst:gd:exit:* --help" # Exclude mundane commands.
 
 # Environment
-. "$HOME/.bash/env.sh"
+. "$HOME/.config/bash/env.sh"
 
 # Colors
-. "$HOME/.bash/colors.sh"
+. "$HOME/.config/bash/colors.sh"
 
 # Aliases
-. "$HOME/.bash/aliases.sh"
+. "$HOME/.config/bash/aliases.sh"
 
 # Functions
-. "$HOME/.bash/functions-private.sh"
-. "$HOME/.bash/functions-public.sh"
+. "$HOME/.config/bash/functions-private.sh"
+. "$HOME/.config/bash/functions-public.sh"
 
 # Command Prompt (http://jonisalonen.com/2012/your-bash-prompt-needs-this)
-. "$HOME/.bash/prompt.sh"
+. "$HOME/.config/bash/prompt.sh"
 
-# Homebrew (http://brew.sh)
+# Homebrew
+export HOMEBREW_FORCE_BREWED_GIT=1
+export HOMEBREW_INSTALL_CLEANUP=1
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_PREFIX="/usr/local"
 export PATH="/usr/local/sbin:$PATH"
 
-# Bash Completion (http://bash-completion.alioth.debian.org)
+# Bash Completion
 if [[ -f /usr/local/etc/bash_completion ]]; then
   . /usr/local/etc/bash_completion
 fi
 
-# GPG (https://www.gnupg.org)
+# OpenSSL
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# FZF
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --color always --exclude .git"
+export FZF_DEFAULT_OPTS="--multi --ansi"
+
+# Git
+source "$HOMEBREW_PREFIX/opt/git/etc/bash_completion.d/git-completion.bash"
+
+# GPG
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-  . "${HOME}/.gpg-agent-info"
-  export GPG_AGENT_INFO
-  export SSH_AUTH_SOCK
-  export SSH_AGENT_PID
-fi
-
-# Go (https://golang.org)
-if [[ -e /usr/local/bin/go ]]; then
-  export GOPATH=$HOME/Apps/Go
-  export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
-fi
-
-# direnv (http://direnv.net)
+# direnv
 if [[ -e /usr/local/bin/direnv ]]; then
   eval "$(direnv hook bash)"
 fi
 
-# chruby (https://github.com/postmodern/chruby)
+# chruby
 if [[ -e /usr/local/share/chruby ]]; then
   source /usr/local/share/chruby/chruby.sh
   source /usr/local/share/chruby/auto.sh
 fi
 
-# Node.js (http://nodejs.org)
+# Node
 export PATH="$PATH:/usr/local/share/npm/bin"
 
-# Travis CI (https://travis-ci.org)
-if [[ -e "$HOME/.travis/travis.sh" ]]; then
-  source "$HOME/.travis/travis.sh"
-fi
+# Yarn
+export PATH="$PATH:$(yarn global bin)"
 
-# Z (https://github.com/rupa/z)
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Z
 if [[ -e /usr/local/etc/profile.d/z.sh ]]; then
   . /usr/local/etc/profile.d/z.sh
 fi

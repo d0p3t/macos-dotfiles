@@ -1,34 +1,44 @@
-# Setup
-ruby_info = "#{RUBY_VERSION}"
-rails_info = "#{Rails.application.class.parent_name.downcase}|#{Rails.env}" if defined?(Rails)
-
 # Prompt
+
+rails_prompt = begin
+  "#{Rails.version}|#{Rails.application.class.parent_name.downcase}|#{Rails.env}"
+rescue NameError
+  nil
+end
+
 Pry.config.prompt = [
   proc do |conf|
-    tree = conf.binding_stack.map { |stack| Pry.view_clip stack.eval("self") } * " / "
-    info = [ruby_info, rails_info, "PRY #{tree} - #{conf.expr_number}:#{conf.nesting_level}"].compact * "|"
-    "[#{info}]> "
+    tree = conf.binding_stack.map { |stack| Pry.view_clip stack.eval("self") }
+    prompt = %(#{tree.join " / "} - #{conf.expr_number}:#{conf.nesting_level})
+    %([#{[RUBY_VERSION, rails_prompt, prompt].compact.join "|"}]> )
   end
 ]
 
-# History
-Pry.config.history.file = %(#{ENV["HOME"]}/.irb_history) # Keep IRB and Pry history the same.
+# History (Keep IRB and Pry the same)
+Pry.config.history.file = %(#{ENV["HOME"]}/.config/irb/history.log)
 
 # Aliases
 Pry.commands.alias_command "w", "whereami"
 
 if defined?(Byebug)
-  Pry.commands.alias_command "c", "continue"
-  Pry.commands.alias_command "s", "step"
-  Pry.commands.alias_command "n", "next"
-  Pry.commands.alias_command "f", "finish"
   Pry.commands.alias_command "bp", "break"
-  Pry.commands.alias_command "bpe", "break --enable"
-  Pry.commands.alias_command "bpd", "break --disable"
-  Pry.commands.alias_command "bpD", "break --delete"
-  Pry.commands.alias_command "bpc", "break --disable-all"
   Pry.commands.alias_command "bpC", "break --delete-all"
+  Pry.commands.alias_command "bpc", "break --disable-all"
+  Pry.commands.alias_command "bpD", "break --delete"
+  Pry.commands.alias_command "bpd", "break --disable"
+  Pry.commands.alias_command "bpe", "break --enable"
   Pry.commands.alias_command "bph", "break --help"
+  Pry.commands.alias_command "bt", "backtrace"
+  Pry.commands.alias_command "c", "continue"
+  Pry.commands.alias_command "dis", "disable-pry"
+  Pry.commands.alias_command "e", "edit"
+  Pry.commands.alias_command "f", "finish"
+  Pry.commands.alias_command "n", "next"
+  Pry.commands.alias_command "pl", "play --lines"
+  Pry.commands.alias_command "po", "play -o"
+  Pry.commands.alias_command "s", "step"
+  Pry.commands.alias_command "si", "show-input"
+  Pry.commands.alias_command "ss", "show-source"
 end
 
 # Editors
